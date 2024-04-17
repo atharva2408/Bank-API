@@ -1,2 +1,2 @@
 # Expense-tracker-in-js
-This is a expense tracker API
+This is an expense tracker API
