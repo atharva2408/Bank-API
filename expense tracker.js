@@ -48,6 +48,7 @@ const addTransaction = async () => {
 
 // Function to save transactions to a JSON file
 const saveTransactionsToFile = () => {
+    // const filename = 'transaction s.json';
     // Check if the file exists
     if (!fs.existsSync(filename)) {
         // Create the file if it doesn't exist
