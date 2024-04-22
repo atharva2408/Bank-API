@@ -1,2 +1,2 @@
-# Expense-tracker-in-js
-This is an expense tracker API
+# Bank API
+This is a bank api project for basic transaction management.
