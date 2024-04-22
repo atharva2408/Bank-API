@@ -11,14 +11,17 @@ const readTransactionsFromFile = (filename) => {
                 return;
             }
 
+            // Check if data is empty
+            if (!data) {
+                console.log('File is empty, returning empty array');
+                resolve([]);
+                return;
+            }
+
             // Parse JSON data
             try {
                 const parsedData = JSON.parse(data);
-                transactions = parsedData;
-                if(transactions.length != 0){
-                    balance = transactions[transactions.length -1].balance;
-                }
-                resolve(transactions);
+                resolve(parsedData);
             } catch (error) {
                 console.error('Error parsing JSON:', error);
                 reject(error);
@@ -26,6 +29,7 @@ const readTransactionsFromFile = (filename) => {
         });
     });
 };
+
 
 // Function to save transactions to a JSON file
 const saveTransactionsToFile = (transactions,filename) => {
